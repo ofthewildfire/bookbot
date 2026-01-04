@@ -1,2 +1,4 @@
 # bookbot
-Python Bookbot project to analyze books via the CLI
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
+
