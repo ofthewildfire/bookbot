@@ -17,8 +17,9 @@ def letter_count(text):
 def sorted_list(dict, book_path, word_count):
     let_list = []
     for i in dict:
-        let_list.append(f"char: {i}, num: {dict[i]}")
-    print(let_list)
+        if(i.isalpha()):
+            let_list.append(f"char: {i}, num: {dict[i]}")
+    print(sorted(let_list))
 #         print(f"""============ BOOKBOT ============
 # Analyzing book found at {book_path}...
 # ----------- Word Count ----------
