@@ -14,5 +14,5 @@ text = get_book_text('books/frankenstein.txt')
 word_count(text)
 count = letter_count(text)
 
-sorted_list(count, book_path, word_count )
+# sorted_list(count, book_path, word_count )
 
