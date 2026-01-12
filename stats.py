@@ -1,8 +1,9 @@
+# Count words in book
 def word_count(book_text):
     num_words = len(book_text.split())
     print(f"Found {num_words} total words")
 
-
+# Count letters in book
 def letter_count(text):
     count = {}
     textLower = text.lower()
@@ -13,11 +14,12 @@ def letter_count(text):
             count[i.lower()] = 1
     return count
 
-
+# Sort list function
 def sort_on(list):
     return list['num']
 
 
+# Sorted list function
 def sorted_list(dict, book_path, word_count):
     let_list = []
     for i in dict:
