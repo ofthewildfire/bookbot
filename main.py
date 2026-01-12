@@ -1,4 +1,5 @@
-from stats import word_count, letter_count, sorted_list
+import sys
+from stats import word_count, letter_count, sorted_list, word_count_return
 
 def get_book_text(book_path):
     book_text = ''
@@ -10,23 +11,33 @@ def get_book_text(book_path):
 
 book_path = 'books/frankenstein.txt'
 
-text = get_book_text('books/frankenstein.txt')
-word_count(text)
-count = letter_count(text)
+book = get_book_text('books/frankenstein.txt')
 
-sorted_list(count, book_path, word_count )
+word_count(book)
 
+book_letter_count = letter_count(book)
 
-
-print(sorted_list)
+word_count_num = word_count_return(book)
 
 
 
-def print_report():
+sorted_list_in_reverse = sorted_list(book_letter_count, book_path, word_count_num )
+
+
+def print_report(sorted_list_in_reverse, book_path, word_count):
+    list_string = ''
+    for i in sorted_list_in_reverse:
+        list_string += f"{i['char']}: {i['num']}\n"
     print(f"""============ BOOKBOT ============
-    Analyzing book found at {book_path}...
-    ----------- Word Count ----------
-    Found {word_count} total words
-    --------- Character Count -------
+Analyzing book found at {book_path}...
+----------- Word Count ----------
+Found {word_count} total words
+--------- Character Count -------
+{list_string}
+============= END ===============""")
 
-    ============= END ===============""")
+
+print_report(sorted_list_in_reverse, book_path, word_count_num)
+
+
+print(sys.argv)
