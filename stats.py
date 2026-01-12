@@ -18,28 +18,16 @@ def sort_on(list):
     return list['num']
 
 
-def testing():
-    items = {"char": "b", "num": 4868}
-    print(f"This should work: {items['num']}")
-
-
 def sorted_list(dict, book_path, word_count):
     let_list = []
-    testing()
     for i in dict:
         if(i.isalpha()):
             dict_create = {"char": i, "num": dict[i]}
             let_list.append(dict_create)
-    print(f"""============ BOOKBOT ============
-    Analyzing book found at {book_path}...
-    ----------- Word Count ----------
-    Found {word_count} total words
-    --------- Character Count -------
-                {let_list.sort(reverse=True, key=sort_on)}
-    ============= END ===============""")
+    return let_list.sort(reverse=True, key=sort_on)
 
                  
 
-        
+
 
 

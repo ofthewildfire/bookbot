@@ -16,3 +16,17 @@ count = letter_count(text)
 
 sorted_list(count, book_path, word_count )
 
+
+
+print(sorted_list)
+
+
+
+def print_report():
+    print(f"""============ BOOKBOT ============
+    Analyzing book found at {book_path}...
+    ----------- Word Count ----------
+    Found {word_count} total words
+    --------- Character Count -------
+
+    ============= END ===============""")
